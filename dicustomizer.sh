@@ -3,9 +3,10 @@
 # author: Carmelo C
 # email: carmelo.califano@gmail.com
 # history, date format ISO 8601:
+#  2024-01-10: Minor edits
 #  2024-01-09: First release
 
-TEMPLATENAME="preseed.cfg.ori"
+TEMPLATENAME="preseed_cfg.tmpl"
 OUTPUTFILE="preseed.cfg"
 #DESTDIR="$HOME/KVM"
 DESTDIR="./"
