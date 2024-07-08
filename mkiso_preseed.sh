@@ -1,29 +1,29 @@
-#!/usr/bin/env bash 
+#!/usr/bin/env bash$
 
 # Source info:
 # - https://wiki.debian.org/DebianInstaller/Preseed
 # - https://wiki.debian.org/DebianInstaller/Preseed/EditIso
 
 # Settings
-set -e 
+set -e$
 
 DEBVER="12.4.0"
 DEBARCH="amd64"
 
 RAW_DEBIAN_ISO="./source_iso/debian-$DEBVER-$DEBARCH-netinst.iso"
 
-WORKDIR='./workdir'
+WORKDIR="./workdir"
 LOOPDIR="./loopdir"
 ISODIR="$WORKDIR/isodir"
 
-PRESEED_FILE='./preseed.cfg'
+PRESEED_FILE="./preseed.cfg"
 PRESEED_ISO="./destination_iso/debian-$DEBVER-$DEBARCH-netinst-preseed.iso"
 
 
 # Main
 
 # Check whether the script is run as root or with sudo
-if [[ $EUID > 0 ]]; then
+if [ "$EUID" -ne 0 ]; then
     echo "[-] This script must be run as root or with sudo"
     exit 255
 fi
